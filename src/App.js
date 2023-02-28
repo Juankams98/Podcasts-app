@@ -1,23 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import { MainHeader } from './components/mainHeader/mainHeader';
+import { Podcast } from './components/podcast/podcast';
+import { dataMock } from './mocks/datamock'
 
 function App() {
   return (
     <div className="App" id='main'>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn ReactJS
-        </a>
-      </header>
+      {MainHeader()}
+      {Podcast(dataMock)}
     </div>
   );
 }
